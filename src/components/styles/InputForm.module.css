@@ -1,0 +1,116 @@
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  border-bottom: 2px dotted #ccc;
+  padding-bottom: 1.5rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 10px;
+  color: #333 !important;
+}
+
+.inputGroup input {
+  color: #333 !important;
+}
+
+.inputField {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.submitButton {
+  padding: 10px 20px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.submitButton:hover {
+  background-color: #0056b3;
+}
+
+/* ボタンが無効化されたときのスタイル */
+.submitButton:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.optionsGroup {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.priorityGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 0;
+}
+
+.priorityLabel {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: #555;
+  user-select: none;
+}
+
+.categoryGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.categoryLabel {
+  font-weight: bold;
+  color: #555;
+}
+
+.priorityLabel {
+  font-weight: bold;
+  color: #555;
+}
+
+.categorySelect {
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+@media (max-width: 968px) {
+  .inputContainer {
+    width: 100%;
+  }
+
+  .inputGroup {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .optionsGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .categoryGroup {
+    flex-wrap: wrap;
+  }
+}

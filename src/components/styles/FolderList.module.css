@@ -1,0 +1,119 @@
+.folderListContainer {
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-right: 1px solid #e0e0e0;
+  width: 290px;
+  border-radius: 8px;
+}
+
+.folderListContainer h3 {
+  margin-top: 0;
+  color: #555;
+  font-size: 1.2rem;
+}
+
+.inputGroup {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 1rem;
+}
+
+.inputGroup input {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.inputGroup button {
+  padding: 8px 12px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.folderList {
+  list-style: none;
+  padding: 0;
+}
+
+.folderItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  transition: background-color 0.2s;
+}
+
+.folderItem:hover {
+  background-color: #e9ecef;
+}
+
+.folderItem.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.folderItem button {
+  width: 35px;
+  background: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.folderItem button:hover {
+  width: 35px;
+  background-color: #dc3545;
+  color: white;
+}
+
+.folderNameWrapper {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  word-break: break-all;
+}
+
+@media (max-width: 968px) {
+  .folderListContainer {
+    border-right: none;
+    border-bottom: 1px solid #e0e0e0;
+    margin-right: 20px;
+    margin-left: -10px;
+    border-radius: 8px;
+  }
+
+  .inputGroup {
+    display: flex;
+    gap: 5px;
+    color: #007bff;
+    margin-bottom: 1rem;
+  }
+  
+  .inputGroup input {
+    width: 10px;
+  }
+
+  .folderItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    transition: background-color 0.2s;
+    font-size: 14px;
+  }
+}

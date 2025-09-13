@@ -1,0 +1,422 @@
+.todoList {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+  margin-top: 2rem;
+}
+
+.noTasks {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+.todoItem {
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #eee;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.2s ease,
+    box-shadow 0.2s ease, opacity 0.2s ease;
+}
+
+.todoItem:hover {
+  background-color: #f5f5f5;
+}
+
+.itemLeft {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 10px;
+  flex-grow: 1;
+}
+
+.itemLeft input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  accent-color: #4caf50;
+  flex-shrink: 0;
+}
+
+.priorityBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 23px;
+  height: 23px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-right: 10px;
+  flex-shrink: 0;
+  color: #fff;
+}
+
+/* 各優先度の背景色を定義 */
+.highPriority {
+  background-color: #f44336;
+}
+
+.mediumPriority {
+  background-color: #ffc107;
+}
+
+.lowPriority {
+  background-color: #4caf50;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #a0a0a0;
+  transition: color 0.3s ease;
+}
+
+.Text {
+  max-width: 300px;
+  font-size: 1.2rem;
+}
+
+.scrollableText {
+  white-space: nowrap;
+  overflow-x: auto;
+  max-width: 300px;
+  display: inline-block;
+  vertical-align: top;
+  font-size: 0.9rem;
+}
+
+.priorityTag {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.highPriority {
+  background-color: #e53935;
+}
+
+.mediumPriority {
+  background-color: #ffb300;
+}
+
+.lowPriority {
+  background-color: #43a047;
+}
+
+.deleteButton {
+  background: none;
+  border: none;
+  color: #e53935;
+  font-size: 1.5rem;
+  cursor: pointer;
+  opacity: 0.6;
+  transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  padding: 15px 15px;
+  border-radius: 0 8px 8px 0;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  max-height: 65px;
+}
+
+.deleteButton:hover {
+  opacity: 1;
+  color: white;
+  background-color: #e53935;
+}
+
+.itemRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+
+.categoryDropdownContainer {
+  position: relative;
+}
+
+.categoryButton {
+  color: #333 !important;
+  background-color: #f0f0f0;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  width: 110px;
+  text-align: left;
+}
+
+.categoryDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 5px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.categoryOption {
+  background: none;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  text-align: left;
+  font-size: 0.9rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.categoryOption:hover {
+  background-color: #f0f0f0;
+}
+
+.folderDropdownContainer {
+  position: relative;
+}
+
+.folderButton {
+  color: #333 !important;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.folderDropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.folderCheckboxLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.emptyTaskList {
+  text-align: center;
+  color: #888;
+  font-style: italic;
+  margin-top: 2rem;
+  padding: 2rem;
+  border: 2px dashed #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 968px) {
+  .todoList {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 2rem;
+  }
+  
+  .emptyTaskList {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    margin-top: 2rem;
+    padding: 2rem;
+    border: 2px dashed #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .todoItem {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: 1px solid #eee;
+    padding: 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .todoItem:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .itemLeft,
+  .itemRight {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  
+  .itemLeft {
+    padding-bottom: 5px;
+  }
+  
+  .itemRight {
+    padding-top: 5px;
+    justify-content: flex-end;
+  }
+  
+  .itemLeft input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    accent-color: #4caf50;
+    flex-shrink: 0;
+  }
+  
+  .priorityTag {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .highPriority {
+    background-color: #e53935;
+  }
+  
+  .mediumPriority {
+    background-color: #ffb300;
+  }
+  
+  .lowPriority {
+    background-color: #43a047;
+  }
+  
+  .taskText {
+    font-size: 1.2rem;
+    flex-grow: 1;
+    word-break: break-all;
+    white-space: normal;
+  }
+  
+  .deleteButton {
+    background: none;
+    border: none;
+    color: #e53935;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    padding: 10px;
+    border-radius: 4px;
+    flex-shrink: 0;
+  }
+  
+  .deleteButton:hover {
+    opacity: 1;
+    color: white;
+    background-color: #e53935;
+  }
+  
+  .categoryDropdownContainer,
+  .folderDropdownContainer {
+    position: relative;
+    flex-grow: 1;
+  }
+  
+  .categoryButton,
+  .folderButton {
+    color: #333 !important;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .categoryDropdown,
+  .folderDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    margin-top: 5px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .categoryOption {
+    background: none;
+    border: none;
+    padding: 8px 10px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 0.9rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .categoryOption:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .folderCheckboxLabel {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 5px;
+  }
+
+  .deleteButton {
+    background: none;
+    border: none;
+    color: #e53935;
+    font-size: 1.5rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    padding: 13px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    max-height: 38px;
+  }
+}

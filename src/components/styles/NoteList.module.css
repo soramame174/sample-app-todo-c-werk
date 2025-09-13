@@ -1,0 +1,288 @@
+.noteListContainer {
+  margin-bottom: 2rem;
+  background-color: #fdfdfd;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  max-width: 1010px;
+  margin-left: -10px;
+}
+
+.noteInputGroup {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+
+.noteInputGroup input {
+  flex-grow: 1;
+  max-width: 530px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  color: #333;
+}
+
+.colorPickerWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.colorPickerButton {
+  width: auto;
+  height: 30px;
+  border: 1px solid #007bff;
+  background-color: #007bff !important;
+  border-radius: 15px;
+  cursor: pointer;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 無効化されたボタンのスタイル */
+.noteInputGroup button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  opacity: 0.8;
+}
+
+.buttonText {
+  color: #fff;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.colorDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.noteInputGroup button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.noteList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 250px;
+  overflow-y: auto;
+  margin: -0.5rem;
+}
+
+.noteItem {
+  padding: 15px;
+  border-left: 5px solid;
+  border-radius: 8px;
+  position: relative;
+  flex: 0 0 calc(33.333% - 1rem);
+  box-sizing: border-box;
+  min-height: 7px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin: 0.5rem;
+  max-width: 210px;
+}
+
+.noteItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.noteItem p {
+  margin: 0;
+  color: #111111cd !important;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-left: -30px;
+}
+
+.scrollableNoteText {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-y: auto;
+  max-height: 150px;
+  display: block;
+}
+
+.noteItem button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* ノートの背景色とボーダーの色を明確に */
+.yellow {
+  background-color: #fffacd;
+  border-color: #ffc107;
+}
+.green {
+  background-color: #c8e6c9;
+  border-color: #4caf50;
+}
+.blue {
+  background-color: #b3e5fc;
+  border-color: #2196f3;
+}
+.pink {
+  background-color: #f8bbd0;
+  border-color: #e91e63;
+}
+.purple {
+  background-color: #e1bee7;
+  border-color: #9c27b0;
+}
+.orange {
+  background-color: #ffccbc;
+  border-color: #ff5722;
+}
+.white {
+  background-color: #fdfdfd;
+  border-color: #b0bec5;
+}
+
+.noteContent {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+
+.colorOption {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 8px 15px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.colorOption:hover {
+  background-color: #f0f0f0;
+}
+
+.colorDot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  margin-left: -10px;
+  margin-right: 5px;
+}
+
+.noteColorDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.noteInputGroup button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #28a745;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.urlIcon {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 0.7rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.urlIconOnly {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  font-size: 0.8rem;
+  padding: 5px 8px;
+  border-radius: 4px;
+}
+
+.clickableNote {
+  cursor: pointer;
+}
+
+/* ノートがないときのメッセージのデザイン */
+.noNotesMessage {
+  text-align: center;
+  color: #6c757d;
+  font-size: 1.0rem;
+  font-weight: 300;
+  padding: 2rem;
+  background-color: #f1f3f5;
+  border-radius: 10px;
+  border: 1px dashed #ced4da;
+  letter-spacing: 0.05rem;
+  font-style: italic;
+}
+
+@media (max-width: 968px) {
+  .noteInputGroup {
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .noteInputGroup input {
+    max-width: none;
+    width: 100%;
+  }
+
+  .noteItem {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .noteItem button {
+    align-self: flex-end;
+  }
+
+  .colorPickerWrapper {
+    width: 100%;
+  }
+
+  .colorPickerButton {
+    width: 100%;
+  }
+  
+  .noteContent {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .noteText {
+    word-break: break-word;
+  }
+}
